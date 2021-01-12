@@ -1,5 +1,15 @@
-<ul class="list-group">
-  {{#each users}}
-  <li class="list-group-item"> 姓名:{{ this.firstName }} 帳號: {{ this.email }} 密碼: {{ this.password }} </li>
-  {{/each}}
-</ul>
+<h2 class="text-center fw-bolder">Account Login</h3>
+<form action="/login" method="POST" class="text-center">
+  <div class="mt-4">
+    <input type="text" placeholder="Email" name="mail" class="border border-secondary border-2 p-2" style="width: 280px;">
+  </div>
+  <div class="mt-4">
+    <input type="text" placeholder="Password" name="password" class="border border-secondary border-2 p-2" style="width: 280px;">
+  </div>
+  <div class="mt-4">
+    <button type="submit" class="btn border border-dark fw-bold shadow px-4 py-2 rounded-3">Sign in</button>
+  </div>
+  <div class="mt-4">
+    {{ error }}
+  </div>
+</form>
